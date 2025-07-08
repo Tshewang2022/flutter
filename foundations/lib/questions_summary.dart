@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class QuestionsSummary extends StatelessWidget {
   const QuestionsSummary(this.summarData, {super.key});
   final List<Map<String, Object>> summarData;
-
+// everything is a widget in flutter; just need a right concept
   @override
   Widget build(BuildContext context) {
     return SizedBox(
