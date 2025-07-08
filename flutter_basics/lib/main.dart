@@ -1,7 +1,6 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_basics/widgets/navbar_widget.dart';
+import 'package:flutter_basics/views/widget_tree.dart';
 
 void main(){
   runApp(const MyApp());
@@ -25,39 +24,7 @@ class MyApp extends StatelessWidget{
         )
       ),
       // skeleton of the app
-      home:MyHomePage()
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget{
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState()=> _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage>{
-  // We can store the var here
-  int currentIndex =0;
-  @override
-  Widget build(BuildContext context){
-    // and here
-    return Scaffold(
-      // kind of like the header of the word document
-      appBar: AppBar(
-        title: Text(title!),
-        centerTitle: true,
-      ),
-      body: currentIndex==0?Center(child: Text("1")):Center(child: Text("2")),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          print("Pressing the button");
-        },
-        child: Icon(Icons.add),
-      ),
-      bottomNavigationBar: NavbarWidget()
-
+      home: WidgetTree()
     );
   }
 }
