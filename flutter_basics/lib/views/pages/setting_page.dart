@@ -39,7 +39,6 @@ class _SettingPage extends State<SettingPage>{
                     });
                   },
                 ),
-
                 Text(controller.text),
                 Checkbox.adaptive(value: isChecked, onChanged: (bool ? value){
                   setState(() {

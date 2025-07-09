@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/data/constants.dart';
 import 'package:flutter_basics/data/notifiers.dart';
 import 'package:flutter_basics/views/pages/home_page.dart';
 import 'package:flutter_basics/views/pages/profile_page.dart';
 import 'package:flutter_basics/views/pages/setting_page.dart';
 import 'package:flutter_basics/views/widgets/navbar_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 List<Widget> pages =[
   HomePage(),
@@ -19,8 +21,10 @@ class WidgetTree extends StatelessWidget{
         title: Text("Flutter app"),
         actions: [
           IconButton(
-              onPressed: (){
+              onPressed: ()async{
                 isDarkThemeNotifier.value = !isDarkThemeNotifier.value;
+                final SharedPreferences prefs = await SharedPreferences.getInstance();
+                await prefs.setBool(KConstants.themeModeKey, !isDarkThemeNotifier.value);
               },
               icon:ValueListenableBuilder(
                   valueListenable: isDarkThemeNotifier,
