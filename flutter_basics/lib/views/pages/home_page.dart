@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/views/hero.dart';
 
+//today will be engage into more of the advance concepts
+// dealing with the data transfer from one screen to another screen
 class HomePage extends StatelessWidget{
   const HomePage({super.key});
 
