@@ -3,6 +3,11 @@ import 'package:flutter_basics/views/hero.dart';
 import 'package:flutter_basics/views/widget_tree.dart';
 
 // the advance concept lies in adjusting app design according to the screen sizes
+// Layout widget, and MediaQuery are the concepts that are related to the advance concepts
+// api integration(what are the necessary package that we need to run api in our app)
+// will be learning api integrations today;
+// train your mental and visual frame
+// structural training of the brain for the visual recognition
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
